@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+<!-- 	Cities -->
+	<bean id="Budapest" class="com.epam.jjp.domain.City" scope="singleton"
+	p:name="Budapest"
+	p:timeZoneCorrection="0"/>
+	
+	<bean id="Beograd" class="com.epam.jjp.domain.City" scope="singleton"
+	p:name="Beograd"
+	p:timeZoneCorrection="0"/>
+	
+	<bean id="Paris" class="com.epam.jjp.domain.City" scope="singleton"
+	p:name="Paris"
+	p:timeZoneCorrection="1"/>
+	
+<!-- 	Routes -->
+	<bean id="BudapestBeograd" class="com.epam.jjp.domain.Route" scope="singleton"
+	p:from-ref="Budapest"
+	p:to-ref="Beograd"
+	p:fuelNecessary="100"
+	p:lenght="400"/>
+	
+	<bean id="ParisBudapest" class="com.epam.jjp.domain.Route" scope="singleton"
+	p:from-ref="Paris"
+	p:to-ref="Budapest"
+	p:fuelNecessary="350"
+	p:lenght="1100" />
+	
+	<bean id="BudapestParis" class="com.epam.jjp.domain.Route" scope="singleton"
+	p:from-ref="Budapest"
+	p:to-ref="Paris"
+	p:fuelNecessary="360"
+	p:lenght="1110"/>
+	
+</beans>

@@ -7,7 +7,7 @@ public class Plane {
 	private long id;
 	private String name;
 	private List<String> errorLog;
-	private int fuel;
+	private long fuel;
 	
 	public Plane() {
 		errorLog = new ArrayList<>();
@@ -37,16 +37,24 @@ public class Plane {
 		this.name = name;
 	}
 
-	public int getFuel() {
+	public long getFuel() {
 		return fuel;
 	}
 
-	public void setFuel(int fuel) {
-		this.fuel = fuel;
+	public void setFuel(long l) {
+		this.fuel = l;
 	}
 
 	public List<String> getErrorLog() {
 		return errorLog;
 	}
+
+	@Override
+	public String toString() {
+		return "Plane [id=" + id + ", name=" + name + ", errorLog=" + errorLog
+				+ ", fuel=" + fuel + "]";
+	}
+	
+	
 	
 }

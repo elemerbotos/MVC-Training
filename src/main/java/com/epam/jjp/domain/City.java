@@ -12,11 +12,16 @@ public class City {
 		this.name = name;
 	}
 
-	public int getTimeZoneCorrection() {
+	public int getTimeZone() {
 		return timeZoneCorrection;
 	}
 
 	public void setTimeZoneCorrection(int timeZoneCorrection) {
 		this.timeZoneCorrection = timeZoneCorrection;
+	}
+	
+	@Override
+	public String toString() {
+		return "Name: " + name;
 	}
 }
